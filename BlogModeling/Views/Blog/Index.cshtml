@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BlogModeling.Models.Blog>
+@{
+    ViewData["Title"] = "Blog Page";
+}
+
+<div class="container">
+    <div>
+        @foreach(var obj in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" asp-for "@Html.DisplayFor(modelItem => obj.Title)">Title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+
